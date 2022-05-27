@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <!--edit text to accept the input from the user-->
+
+    <!--edit text to display output to the user.
+        Edit text is used since the user can copy the
+        text easily if he/she wants to-->
+
+
+    <TextView
+        android:id="@+id/tvgfg"
+        android:layout_width="341dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/mybutton1"
+        android:gravity="center"
+        android:text="@string/Input"
+        android:textAlignment="center"
+        android:textColor="#d0fe1d"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/etinput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/etinput"
+        android:layout_width="341dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/texthead"
+        android:gravity="center"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/llout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:id="@+id/llout"
+        android:layout_width="360dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="196dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnencode"
+            android:layout_width="113dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mybutton"
+            android:padding="1dp"
+            android:text="Encode"
+            android:textColor="#F79548"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,TextContrastCheck" />
+
+        <Button
+            android:id="@+id/btnclear"
+            android:layout_width="113dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mybutton"
+            android:padding="1dp"
+            android:text="clear"
+            android:textColor="#F79548"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,TextContrastCheck" />
+
+        <Button
+            android:id="@+id/btndecode"
+            android:layout_width="113dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mybutton"
+            android:padding="1dp"
+            android:text="decode"
+            android:textColor="#F79548"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            tools:ignore="ButtonStyle,HardcodedText,TextContrastCheck,TextContrastCheck" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="341dp"
+        android:layout_height="44dp"
+        android:background="@drawable/mybutton1"
+        android:gravity="center"
+        android:text="@string/display"
+        android:textColor="#d0fe1d"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/etoutput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llout"
+        app:layout_constraintVertical_bias="0.222" />
+
+    <EditText
+        android:id="@+id/etoutput"
+        android:layout_width="341dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/texthead"
+        android:gravity="center"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llout"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnhistory"
+        android:layout_width="146dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/mybutton"
+        android:onClick="saveText"
+        android:padding="13dp"
+        android:text="@string/history"
+        android:textColor="#F79548"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/load"
+        app:layout_constraintTop_toBottomOf="@+id/etoutput"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/load"
+        android:layout_width="146dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/mybutton"
+        android:onClick="pull"
+        android:padding="13dp"
+        android:text="@string/load"
+        android:textColor="#F79548"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/update"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etoutput"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/update"
+        android:layout_width="341dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/texthead"
+        android:gravity="center"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:text="@string/preview"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnhistory" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

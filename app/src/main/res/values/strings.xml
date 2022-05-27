@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HailMary</string>
+    <string name="morse_code_converter">Morse code Converter</string>
+    <string name="cypher_games">Cypher games</string>
+    <string name="input">input</string>
+    <string name="history">History</string>
+    <string name="display">Display</string>
+    <string name="Input">Input</string>
+    <string name="load">Load</string>
+    <string name="preview">preview</string>
+</resources>
